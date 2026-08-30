@@ -1,4 +1,4 @@
-#include <raylib.h>
+#include "include/raylib.h"
 #include <math.h>
 
 #define BACKGROUND_COLOR (Color){186, 149, 127}
@@ -19,15 +19,14 @@ typedef struct {
 int main() {
     const int WIDTH = 1024;
     const int HEIGHT = 768;
-    SetConfigFlags(FLAG_WINDOW_UNDECORATED | FLAG_WINDOW_HIGHDPI);
     InitWindow(WIDTH, HEIGHT, "Racer");
     SetTargetFPS(60);
     const float WORLD_SIZE = 10000;
-    Image city_image = LoadImage("assets/city.png");
+    Image city_image = LoadImage("assets\\city.png");
     ImageRotateCW(&city_image);
     Texture2D city_texture = LoadTextureFromImage(city_image);
     const float CITY_SCALE = 2.0f;
-    Image car_image = LoadImage("assets/car.png");
+    Image car_image = LoadImage("assets\\car.png");
     Texture2D car_texture = LoadTextureFromImage(car_image);
     Rectangle car_texture_rec = {
         .x = 0,
