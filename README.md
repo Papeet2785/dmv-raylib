@@ -29,7 +29,7 @@ The goal of the project is to create a simple environment for practicing driving
 
 ## Building
 
-The project uses `clang`, `pkg-config`, and raylib.
+The project uses  raylib.
 
 ```bash
-./build.sh
+./build.ps1
